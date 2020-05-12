@@ -1,0 +1,110 @@
+body{
+  background-color: #eaeaea;
+}
+h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  color: #364f6b;
+}
+h2{
+  font-family: 'Sacramento', cursive;
+  color: #de4775;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.title_div{
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  color: #364f6b;
+  text-align: center;
+
+}
+.pantry_status_heading{
+  font-family: 'Slabo 27px', serif;
+  color: #364f6b;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #f788a2;
+  height:2.3rem;
+  line-height: normal;
+}
+.top_button_left_cells{
+  font-family: 'Roboto', sans-serif;
+  color:#364f6b;
+  font-size: 1rem;
+  background-color: #f788a2;
+  text-align: left;
+  padding-left: 0;
+}
+.top_button_right_cells{
+  font-family: 'Roboto', sans-serif;
+  color:#364f6b;
+  font-size: 1rem;
+  background-color: #f788a2;
+  padding-left: 0;
+  padding-top: 3px;
+}
+.top_bar_btn{
+  background-color: #f788a2;
+}
+.sub_title_div{
+}
+.balance_scale_div{
+  padding-top: 20px;
+  padding-left: 0px;
+}
+.balance_scale_image{
+  width: 4rem;
+  height: 4rem;
+  color: #fc5185;
+  padding-top: 0px;
+  padding-left: 5px;
+}
+
+.pantry_image{
+  width: 20rem;
+}
+.idea-detail{
+  font-family: 'Slabo 27px', serif;
+  color: #364f6b;
+}
+.credits{
+  font-size: 0.7rem;
+  text-align: center;
+}
+.item_icon_image{
+  width: 6rem;
+  height:8rem;
+}
+.item_icon_div{
+  padding-left: 0px;
+}
+
+.add_to_list_div{
+  padding:0;
+  align-self: center;
+
+}
+.one_item_status  {
+  font-family: 'Roboto', sans-serif;
+  color: #364f6b;
+  background-color:#dbd7d7;
+  border-style:solid;
+  border-color:#f0ebeb;
+  border-width:1px;
+
+}
+.item_details{
+  align-self: center;
+}
+
+.add_to_list_btn, .add_to_list_btn:hover, .add_to_list_btn:active, .add_to_list_btn:visited {
+    background-color: #f788a2;
+    border-color: #f76a8c;
+    color: #364f6b;
+}
+
+.shoppinListModalTitle{
+  background-color:#f788a2;}
+.shoppinListModal{
+  background-color:#eaeaea;}

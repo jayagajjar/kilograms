@@ -17,5 +17,5 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
  });
 app.listen(PORT, () => {
-    console.log(`Server is up on port ${port}!`);
+    console.log(`Server is up on port ${PORT}!`);
  });

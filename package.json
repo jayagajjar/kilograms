@@ -11,6 +11,8 @@
   "dependencies": {
     "axios": "^0.19.2",
     "concurrently": "^4.0.1",
+    "react-bootstrap": "^1.0.1",
+    "react-router-dom": "^5.2.0",
     "rimraf": "^2.6.2"
   },
   "scripts": {

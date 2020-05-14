@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import items from "./data/items.json";
 import Item from "./Item.jsx";
-//import ModalShoppingList from "./Modal.jsx"; 
+import ModalShoppingList from "./Modal.jsx"; 
 import api from "./api/app.js";
-//import { Modal} from 'react-bootstrap';
+import { Modal} from 'react-bootstrap';
 
 //<Modal show={show} onClose={showModal} onChecked={deleteItem}/>
 function App(){ 
@@ -110,7 +110,25 @@ function App(){
       </div>
       <div className="col-sm top_button_right_cells"><img src="images/plus.png" style={{width:"2em"}} alt="addItemImage"/>&nbsp;&nbsp;&nbsp;
         <img src="images/date.png" style={{width:"2em"}} onClick={handleShow} alt="shoppingListImage"/>
-       
+        <Router>
+        <Switch>
+        <Route pathname="/shoppinglist"
+                    exact
+                    component={() => 
+                    <ModalShoppingList isLoaded={isModalLoaded} show={show} onClose={showModal} onChecked={deleteItem} onLoad={loadShoppingList}/>}
+                />
+                </Switch>
+                </Router>
+               
+
+                <Modal  show={show1} onHide={handleClose}>
+        <Modal.Header className="shoppinListModalTitle" closeButton>
+          <Modal.Title >Shopping List</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="shoppinListModal">{show.shoppingItems.map((a,index)=> <li onClick={(e) => {
+        deleteItem(a.id);
+        }} key={a.id}>{a.name}</li> )}</Modal.Body>
+      </Modal>
       </div>
     </div>
 

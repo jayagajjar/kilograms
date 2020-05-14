@@ -1,15 +1,8 @@
-# 🚀 Welcome to your new awesome project!
+# 💫 ReactJS + NodeJS Express on Heroku
+A **create-react-app** as a client and an **express** as a server, on **Heroku**, made simple
 
-This project has been created using **webpack scaffold**, you can now run
+## Instruction
+Create a new NodeJS app on Heroku, clone or fork this repository, connect the Heroku app to GitHub repository using the Deploy tab and have fun with [ReactJS] and [Express]!
 
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+[ReactJS]: https://github.com/facebook/react/
+[Express]: https://github.com/expressjs/express/

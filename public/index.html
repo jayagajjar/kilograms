@@ -29,6 +29,19 @@
   <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></div>
   
    
-    <script src="../src/index.js" type="text/jsx" ></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then(registration => {
+            console.log("SW registered: ", registration);
+          })
+          .catch(registrationError => {
+            console.log("SW registration failed: ", registrationError);
+          });
+      });
+    }
+  </script>
   </body>
 </html>

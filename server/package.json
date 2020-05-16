@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "index.js",
   "repository": {},
   "license": "MIT",
   "dependencies": {
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "babel . --ignore node_modules,build --out-dir build",
-    "start": "nodemon -r babel-register server.js",
-    "start:prod": "node build/server.js"
+    "start": "nodemon -r babel-register index.html",
+    "start:prod": "node build/index.html"
   }
 }

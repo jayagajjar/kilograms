@@ -1,10 +1,12 @@
 import React, {useState} from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Route } from 'react-router-dom'
 import items from "./data/items.json";
 import Item from "./Item.jsx";
 import ModalShoppingList from "./Modal.jsx"; 
 import api from "./api/app.js";
 import { Modal} from 'react-bootstrap';
+import IndexApp from "./IndexApp";
+import ReactDOM from "react-dom";
 
 //<Modal show={show} onClose={showModal} onChecked={deleteItem}/>
 function App(){ 
@@ -92,6 +94,10 @@ function App(){
         }
         })
   }
+
+  function showIndexPage() {
+    ReactDOM.render(<IndexApp />, document.getElementById("root"));
+  }
   
   const [show1, setShow] = useState(false);
 
@@ -100,26 +106,35 @@ function App(){
     return (
     <div className="container">
     <div className="row">
-      <div className="col-sm title_div">
-        Kilograms<img className="balance_scale_image" src="images/balance_scale.png" alt="" />
+        <div className="col">
+        <table width="100%">
+        <tr><td className="title_div">
+          Kilograms
+          <button title="Go to Index page" className="balance_scale_btn" onClick={showIndexPage}>
+            <img
+              className="balance_scale_image"
+              src="images/balance_scale.png"
+              alt=""
+            />
+          </button>
+          </td>
+          </tr>
+          </table>
+        </div>
       </div>
-    </div>
     <div className="row">
       <div className="col-sm-11 pantry_status_heading" >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Pantry Status
       </div>
       <div className="col-sm top_button_right_cells"><img src="images/plus.png" style={{width:"2em"}} alt="addItemImage"/>&nbsp;&nbsp;&nbsp;
         <img src="images/date.png" style={{width:"2em"}} onClick={handleShow} alt="shoppingListImage"/>
-        <Router>
-        <Switch>
+       
         <Route pathname="/shoppinglist"
                     exact
                     component={() => 
                     <ModalShoppingList isLoaded={isModalLoaded} show={show} onClose={showModal} onChecked={deleteItem} onLoad={loadShoppingList}/>}
                 />
-                </Switch>
-                </Router>
-               
+                
 
                 <Modal  show={show1} onHide={handleClose}>
         <Modal.Header className="shoppinListModalTitle" closeButton>

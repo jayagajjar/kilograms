@@ -5,6 +5,7 @@ h1{
   font-family: 'Dancing Script', cursive;
   font-size: 5rem;
   color: #364f6b;
+  text-align: right;
 }
 h2{
   font-family: 'Sacramento', cursive;
@@ -15,9 +16,18 @@ h2{
 .title_div{
   font-family: 'Dancing Script', cursive;
   font-size: 5rem;
-  color: #364f6b;
+  color: #014d73;
   text-align: center;
-
+  margin: 0;
+}
+.description_div{
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #014d73;
+  text-align: center;
+  margin: 0;
+  align-self: center;
+  padding-bottom: 2rem;
 }
 .pantry_status_heading{
   font-family: 'Slabo 27px', serif;
@@ -52,20 +62,36 @@ h2{
   padding-top: 20px;
   padding-left: 0px;
 }
+.balance_scale_btn{
+  border: none;
+  background: none;
+}
 .balance_scale_image{
+  margin-left: .5rem;
   width: 4rem;
   height: 4rem;
-  color: #fc5185;
-  padding-top: 0px;
-  padding-left: 5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
 .pantry_image{
-  width: 20rem;
+  width: 18rem;
+}
+.pantry_image_left_div{
+  text-align: center;
+  
+}
+.pantry_image_right_div{
+  text-align: center;
+  
 }
 .idea-detail{
   font-family: 'Slabo 27px', serif;
-  color: #364f6b;
+  color: #1d3e63;
 }
 .credits{
   font-size: 0.7rem;

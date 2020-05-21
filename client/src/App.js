@@ -104,13 +104,13 @@ function App(){
   const handleClose = () => setShow(false);
   const handleShow = () => {handleClick();setShow(true)};
     return (
-    <div className="container">
+    <div className="container-fluid">
     <div className="row">
         <div className="col">
         <table width="100%">
         <tr><td className="title_div">
           Kilograms
-          <button title="Go to Index page" className="balance_scale_btn" onClick={showIndexPage}>
+          <button title="Click to see Home page" className="balance_scale_btn" onClick={showIndexPage}>
             <img
               className="balance_scale_image"
               src="images/balance_scale.png"
@@ -123,11 +123,15 @@ function App(){
         </div>
       </div>
     <div className="row">
-      <div className="col-sm-11 pantry_status_heading" >
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Pantry Status
+      <div className="col nav_container" >
+      <div className="pantry_status_heading">
+            Your Pantry Status
       </div>
-      <div className="col-sm top_button_right_cells"><img src="images/plus.png" style={{width:"2em"}} alt="addItemImage"/>&nbsp;&nbsp;&nbsp;
-        <img src="images/date.png" style={{width:"2em"}} onClick={handleShow} alt="shoppingListImage"/>
+      <div className="top_button_right_cells">
+      
+      <button title="Home" className="add_to_list_btn" onClick={showIndexPage}><img src="images/home_icon.png" style={{width:"2em"}}  alt="HomeIconImage"/></button>
+      <button title="Shopping List" className="add_to_list_btn" onClick={handleShow}><img src="images/date.png" style={{width:"2em"}}  alt="shoppingListImage"/></button>
+      <button title="WIP" className="add_to_list_btn" ><img src="images/plus.png" style={{width:"2em"}} alt="addItemImage"/></button>
        
         <Route pathname="/shoppinglist"
                     exact
@@ -144,6 +148,7 @@ function App(){
         deleteItem(a.id);
         }} key={a.id}>{a.name}</li> )}</Modal.Body>
       </Modal>
+      </div>
       </div>
     </div>
 

@@ -31,13 +31,15 @@ function IndexApp() {
       </div>
       <div className="row">
         <div className="col-sm-12 col-lg pantry_image_left_div">
-          <img className="pantry_image" src="images/pantry.jpg" alt="" />
+        <button title="Click to see the List" className="balance_scale_btn" onClick={showItemList}>
+          <img className="pantry_image" src="images/pantry.jpg" alt="" /></button>
         </div>
-        <div className="col-sm-12 col-lg description_div">
-          An<br/> Automated Shopping List
+        <div className="col-sm-12 col-lg description_div"><a href="#">
+          An<br/> Automated Shopping List</a>
         </div>
         <div className="col pantry_image_right_div">
-          <img className="pantry_image" src="images/pantry.jpg" alt="" />
+          <button title="Click to see the List" className="balance_scale_btn" onClick={showItemList}>
+          <img className="pantry_image" src="images/pantry.jpg" alt="" /></button>
         </div>
 
         <div className="row">
@@ -45,9 +47,9 @@ function IndexApp() {
             No need to dig into the pantry and make a list of item to buy.
             Kilograms is providing you with a digital scale that can stick to
             your pantry jars and keep you updated about the weight of the item
-            it has in the jar, and much more! Next time when you go to grocery shopping
+            it has in the jar, and much more. Update your pantry with these digital scales and next time when you go to grocery shopping
             and see your favourite cereal on discount but not sure if you really
-            need it or not, you can check your shopping list in the kilograms app.
+            need it or not, simply check your shopping list in the kilograms app!
           </div>
         </div>
       </div>

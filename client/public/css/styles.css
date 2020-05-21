@@ -13,6 +13,25 @@ h2{
   font-size: 1.5rem;
   text-align: center;
 }
+a {
+  background:
+     linear-gradient(
+       to bottom, rgba(163, 148, 152, 0.123) 0%,
+       rgba(136, 73, 89, 0.425) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 0px 4px;
+  color: #014d73;
+  text-decoration: none;
+  transition: background-size .5s;
+}
+
+a:hover {
+  background-size: 4px 50px;
+  text-decoration: none;
+  color: #de4775;
+}
 .title_div{
   font-family: 'Dancing Script', cursive;
   font-size: 5rem;

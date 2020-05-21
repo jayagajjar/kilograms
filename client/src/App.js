@@ -143,7 +143,7 @@ function App(){
                 <Modal  show={show1} onHide={handleClose}>
         <Modal.Header className="shoppinListModalTitle" closeButton>
           <Modal.Title >Shopping List</Modal.Title>
-        </Modal.Header>
+        </Modal.Header>Click on the items to remove
         <Modal.Body className="shoppinListModal">{show.shoppingItems.map((a,index)=> <li onClick={(e) => {
         deleteItem(a.id);
         }} key={a.id}>{a.name}</li> )}</Modal.Body>

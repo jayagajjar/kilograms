@@ -159,7 +159,7 @@ button:focus {outline:0;}
   border-style:solid;
   border-color:#f0ebeb;
   border-width:1px;
-
+  padding: 0;
 }
 .item_details{
   align-self: center;

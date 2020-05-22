@@ -141,7 +141,7 @@ button:focus {outline:0;}
 }
 .item_icon_image{
   width: 6rem;
-  height:8rem;
+  
 }
 .item_icon_div{
   padding-left: 0px;
@@ -164,9 +164,16 @@ button:focus {outline:0;}
 .item_details{
   align-self: center;
 }
+.add_to_list_div{
+  padding-left: 4rem;
+}
 
-.add_to_list_btn, .add_to_list_btn:hover, .add_to_list_btn:active, .add_to_list_btn:visited {
-  border: none;
+.nav_btn,.add_to_list_btn{
+  background: none;
+  border: 0;
+}
+.add_to_list_img{
+  height: 5rem;
   background: none;
 }
 

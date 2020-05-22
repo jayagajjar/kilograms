@@ -107,7 +107,7 @@ function App(){
     <div className="container-fluid">
     <div className="row">
         <div className="col">
-        <table width="100%">
+        <table width="100%"><tbody>
         <tr><td className="title_div">
           Kilograms
           <button title="Click to see Home page" className="balance_scale_btn" onClick={showIndexPage}>
@@ -118,7 +118,7 @@ function App(){
             />
           </button>
           </td>
-          </tr>
+          </tr></tbody>
           </table>
         </div>
       </div>
@@ -129,9 +129,9 @@ function App(){
       </div>
       <div className="top_button_right_cells">
       
-      <button title="Home" className="add_to_list_btn" onClick={showIndexPage}><img src="images/home_icon.png" style={{width:"2em"}}  alt="HomeIconImage"/></button>
-      <button title="Shopping List" className="add_to_list_btn" onClick={handleShow}><img src="images/date.png" style={{width:"2em"}}  alt="shoppingListImage"/></button>
-      <button title="WIP" className="add_to_list_btn" ><img src="images/plus.png" style={{width:"2em"}} alt="addItemImage"/></button>
+      <button title="Home" className="nav_btn" onClick={showIndexPage}><img src="images/home_icon.png" style={{width:"2em"}}  alt="HomeIconImage"/></button>
+      <button title="Shopping List" className="nav_btn" onClick={handleShow}><img src="images/date.png" style={{width:"2em"}}  alt="shoppingListImage"/></button>
+      <button title="WIP" className="nav_btn" ><img src="images/plus.png" style={{width:"2em"}} alt="addItemImage"/></button>
        
         <Route pathname="/shoppinglist"
                     exact
@@ -156,7 +156,7 @@ function App(){
     
       {items.map((anItem) => {
         return (
-          <div className="col-lg-6 one_item_status" key={anItem.id}><Item onAdd={addItem}
+          <div className="col-lg-6 " key={anItem.id}><Item onAdd={addItem}
       currWeight={anItem.currWeight}
       name={anItem.name}
       minWeightReq={anItem.minWeightReq}

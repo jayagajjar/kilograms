@@ -34,7 +34,7 @@ a:hover {
 }
 .title_div{
   font-family: 'Dancing Script', cursive;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #014d73;
   text-align: center;
   margin: 0;
@@ -131,6 +131,9 @@ button:focus {outline:0;}
   text-align: center;
   
 }
+.app_image{
+  width: 12rem;
+}
 .idea-detail{
   font-family: 'Slabo 27px', serif;
   color: #1d3e63;
@@ -181,3 +184,6 @@ button:focus {outline:0;}
   background-color:#f788a2;}
 .shoppinListModal{
   background-color:#eaeaea;}
+
+
+  

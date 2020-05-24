@@ -39,7 +39,7 @@ function IndexApp() {
         </div>
         <div className="col pantry_image_right_div">
           <button title="Click to see the List" className="balance_scale_btn" onClick={showItemList}>
-          <img className="pantry_image" src="images/pantry.jpg" alt="" /></button>
+          <img className="app_image" src="images/app_image.jpg" alt="" /></button>
         </div>
 
         <div className="row">

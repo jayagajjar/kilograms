@@ -65,6 +65,11 @@ a:hover {
   line-height: normal;
   padding: 0;
 }
+@media (max-width: 991px) {
+  .pantry_status_heading{
+    text-align: left;
+  }
+}
 .top_button_left_cells{
   font-family: 'Roboto', sans-serif;
   color:#364f6b;
@@ -92,6 +97,12 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 11;
+}
+@media (max-width: 991px) {
+  .nav_btn{
+    padding-left: .2rem;
+    padding-right: .2rem;
+  }
 }
 
 .top_bar_btn{

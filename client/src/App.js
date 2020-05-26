@@ -103,6 +103,22 @@ function App(){
 
   const handleClose = () => setShow(false);
   const handleShow = () => {handleClick();setShow(true)};
+
+  function printShoppingListModal(){
+    var elem = document.getElementById("shoppingListModal");
+    var domClone = elem.cloneNode(true);
+    
+    var $printSection = document.getElementById("printSection");
+    if (!$printSection) {
+      var $printSection = document.createElement("div");
+      $printSection.id = "printSection";
+      document.body.appendChild($printSection);
+  }
+  
+  $printSection.innerHTML = "";
+  $printSection.appendChild(domClone);
+    window.print();
+  }
     return (
     <div className="container-fluid">
     <div className="row">
@@ -140,10 +156,12 @@ function App(){
                 />
                 
 
-                <Modal  show={show1} onHide={handleClose}>
+                <Modal id="shoppingListModal" show={show1} onHide={handleClose}>
         <Modal.Header className="shoppinListModalTitle" closeButton>
           <Modal.Title >Shopping List</Modal.Title>
-        </Modal.Header>Click on the items to remove
+        </Modal.Header><table><tbody><tr><td><div id="removeInstruction">Click on the items to remove</div></td>
+        <td style={{'textAlign': 'center'}}><img id="printImg" src="images/print.png" onClick={printShoppingListModal} style={{width:"2em"}}  alt="PrintIconImage"/>
+        </td></tr></tbody></table> 
         <Modal.Body className="shoppinListModal">{show.shoppingItems.map((a,index)=> <li onClick={(e) => {
         deleteItem(a.id);
         }} key={a.id}>{a.name}</li> )}</Modal.Body>

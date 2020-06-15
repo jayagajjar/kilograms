@@ -11,16 +11,7 @@ const router = express.Router()
 const staticFiles = express.static(path.join(__dirname, '../../client/build'))
 app.use(staticFiles)
 
-router.get('/cities', (req, res) => {
-  const cities = [
-    {name: 'New York City', population: 8175133},
-    {name: 'Los Angeles',   population: 3792621},
-    {name: 'Chicago',       population: 2695598}
-  ]
-  res.json(cities)
-})
 
-//app.use(router)
 
 // any routes not picked up by the server api will be handled by the react router
 app.use('/*', staticFiles)

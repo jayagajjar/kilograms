@@ -144,7 +144,8 @@ button:focus {outline:0;}
 }
 .app_image{
   width: 12rem;
-  border-radius: 8%;
+  border-radius: 11%
+  
 }
 .idea-detail{
   font-family: 'Slabo 27px', serif;

@@ -47,13 +47,13 @@
     "name":"Nutrigrain",
     "currWeight":400,
     "minWeightReq":200,
-    "image":"a"
+    "image":"nutrigrain"
 },
 {
     "id":8,
     "name":"Cheerios",
     "currWeight":400,
     "minWeightReq":200,
-    "image":"a"
+    "image":"cheerios"
 }  
 ]

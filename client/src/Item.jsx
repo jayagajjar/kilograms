@@ -1,9 +1,18 @@
 import React from "react";
 
 function Item(props) {
+  
   function clickHandler(event) {
     props.onAdd(props.name);
   }
+  let src
+  if(props.isItemAdded){
+   src= "images/list.png"
+}
+  else{
+    src= "images/add.png"
+  }
+  
   return (
     <div className="col one_item_status">
       <div className="row">
@@ -32,7 +41,8 @@ function Item(props) {
             type="button"
             title="Add to List"
           >
-            <img className="add_to_list_img" src="./images/add.png" />
+            <img className="add_to_list_img" src={src}  />
+           
           </button>
         </div>
       </div>

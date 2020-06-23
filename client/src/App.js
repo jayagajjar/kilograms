@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import { BrowserRouter as Route } from 'react-router-dom'
 import items from "./data/items.json";
 import Item from "./Item.jsx";
@@ -15,7 +15,7 @@ function App(){
   const [show, showModal] = useState({shoppingItems:itemFromShoppingList,toShow:false});
 
   function addItem(newItemName) {
-    console.log(api.getAllItems());
+    //console.log(api.getAllItems());
     
     api.getAllItems().then((a,b)=>{b= a.data.data.filter(b=>b.name === newItemName);
       if(b.length===0){api.insertItem({name:newItemName}).then(res => {
@@ -32,12 +32,8 @@ function App(){
         }
         })
     
-
-    /*api.insertItem({name:newItemName}).then(res => {
-      console.log(`Item inserted successfully`);
-    })*/
     var anItem=[];
-    console.log(api.getAllItems());
+   
     api.getAllItems().then(items =>
       {(items.data.data.map(a=> {return anItem.push({name:a.name,id:a._id});}));
       showModal(()=>{
@@ -47,7 +43,7 @@ function App(){
   
   function handleClick(){
     var anItem=[];
-    console.log(api.getAllItems());
+    
     api.getAllItems().then(items =>
       {(items.data.data.map(a=> {return anItem.push({name:a.name,id:a._id});}));
       showModal(()=>{
@@ -62,24 +58,29 @@ function App(){
         }
         })
   }
-  
+  /** loads the shopping list for the first time use, to show the states of the 'Add to List' buttons*/
   function loadShoppingList(){
+    console.log("loading shopping list")
     var anItem=[];
     api.getAllItems().then(items =>
       {(items.data.data.map(a=> {return anItem.push({name:a.name,id:a._id});}));
+      showModal(()=>{
+        return {shoppingItems:anItem,toShow:false};
+      })
       ; }).catch(error => {
         if(error.response.status === 404){
             console.log("Shopping list is empty");
         }
         })
   }
-
+  useEffect(() => {
+    loadShoppingList();
+  },[]);
+  
   function deleteItem(index) {
-    console.log(index);
    api.deleteItemById(index);
 
    var anItem=[];
-   console.log(api.getAllItems());
     api.getAllItems().then(items =>
       {(items.data.data.map(a=> {return anItem.push({name:a.name,id:a._id});}));
       showModal(()=>{
@@ -179,6 +180,7 @@ function App(){
       name={anItem.name}
       minWeightReq={anItem.minWeightReq}
       image={anItem.image}
+      isItemAdded={show.shoppingItems.filter(a => a.name === anItem.name).length}
           /></div>
         );
       })}

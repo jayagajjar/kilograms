@@ -180,14 +180,13 @@ button:focus {outline:0;}
 .item_details{
   align-self: center;
 }
-.add_to_list_div{
-  
-}
+
 
 .nav_btn,.add_to_list_btn{
   background: none;
   border: 0;
 }
+
 .add_to_list_img{
   height: 3rem;
   background: none;
@@ -224,3 +223,7 @@ button:focus {outline:0;}
       visibility: hidden;
     }
   }
+
+
+  
+  

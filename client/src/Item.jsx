@@ -5,12 +5,14 @@ function Item(props) {
   function clickHandler(event) {
     props.onAdd(props.name);
   }
-  let src
+  let src, tooltip;
   if(props.isItemAdded){
    src= "images/list.png"
+   tooltip= "Added"
 }
   else{
     src= "images/add.png"
+    tooltip="Add to List"
   }
   
   return (
@@ -39,9 +41,9 @@ function Item(props) {
             onClick={clickHandler}
             className="add_to_list_btn"
             type="button"
-            title="Add to List"
+            title={tooltip}
           >
-            <img className="add_to_list_img" src={src}  />
+            <img className="add_to_list_img" src={src}  alt="add to list"/>
            
           </button>
         </div>

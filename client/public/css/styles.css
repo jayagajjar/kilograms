@@ -39,6 +39,14 @@ a:hover {
   text-align: center;
   margin: 0;
 }
+.title_div_modal{
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #014d73;
+  text-align: center;
+  margin: 0;
+}
+
 .description_div{
   font-family: 'Dancing Script', cursive;
   font-size: 3rem;
@@ -191,6 +199,13 @@ button:focus {outline:0;}
   height: 3rem;
   background: none;
 }
+.add_to_list_btn:hover{
+  transform: scale(1.05)
+}
+  
+  
+
+
 
 .shoppinListModalTitle{
   background-color:#f788a2;}
@@ -224,6 +239,18 @@ button:focus {outline:0;}
     }
   }
 
+.modal-close-btn{
+  background-color: #014d73;
+  border-radius: 5px;
+  border: #014d73;
+  color: #dbd7d7;
+  width: 4rem;
+  outline:none;
+}
+.modal-close-btn:hover{
+  background-color: #036494;
+}
+  
 
   
   

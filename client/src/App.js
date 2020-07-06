@@ -15,7 +15,7 @@ function App(){
   const [show, showModal] = useState({shoppingItems:itemFromShoppingList,toShow:false});
 
   function addItem(newItemName) {
-    //console.log(api.getAllItems());
+    console.log(api.getAllItems());
     
     api.getAllItems().then((a,b)=>{b= a.data.data.filter(b=>b.name === newItemName);
       if(b.length===0){api.insertItem({name:newItemName}).then(res => {
@@ -31,9 +31,13 @@ function App(){
           })
         }
         })
-    
+
+
+    /*api.insertItem({name:newItemName}).then(res => {
+      console.log(`Item inserted successfully`);
+    })*/
     var anItem=[];
-   
+    console.log(api.getAllItems());
     api.getAllItems().then(items =>
       {(items.data.data.map(a=> {return anItem.push({name:a.name,id:a._id});}));
       showModal(()=>{
@@ -41,23 +45,7 @@ function App(){
       }); })
   }
   
-  function handleClick(){
-    var anItem=[];
-    
-    api.getAllItems().then(items =>
-      {(items.data.data.map(a=> {return anItem.push({name:a.name,id:a._id});}));
-      showModal(()=>{
-        return {shoppingItems:anItem,toShow:false};
-      }); }).catch(error => {
-        if(error.response.status === 404){
-          showModal(()=>{
-            return {shoppingItems:[],toShow:false};
-          }); 
-          setShow(false);
-            console.log("Shopping list is empty");
-        }
-        })
-  }
+  
   /** loads the shopping list for the first time use, to show the states of the 'Add to List' buttons*/
   function loadShoppingList(){
     console.log("loading shopping list")
@@ -78,9 +66,11 @@ function App(){
   },[]);
   
   function deleteItem(index) {
+    console.log(index);
    api.deleteItemById(index);
 
    var anItem=[];
+   console.log(api.getAllItems());
     api.getAllItems().then(items =>
       {(items.data.data.map(a=> {return anItem.push({name:a.name,id:a._id});}));
       showModal(()=>{
@@ -103,7 +93,7 @@ function App(){
   const [show1, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => {handleClick();setShow(true)};
+  const handleShow = () => {setShow(true)};
 
   function printShoppingListModal(){
     var elem = document.getElementById("shoppingListModal");
@@ -111,7 +101,7 @@ function App(){
     
     var $printSection = document.getElementById("printSection");
     if (!$printSection) {
-      var $printSection = document.createElement("div");
+       $printSection = document.createElement("div");
       $printSection.id = "printSection";
       document.body.appendChild($printSection);
   }
@@ -180,7 +170,7 @@ function App(){
       name={anItem.name}
       minWeightReq={anItem.minWeightReq}
       image={anItem.image}
-      isItemAdded={show.shoppingItems.filter(a => a.name === anItem.name).length}
+      isItemAdded={show.shoppingItems.filter(a => a.name === anItem.name).length > 0}
           /></div>
         );
       })}

@@ -42,7 +42,7 @@ function IndexApp() {
             /></Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <b>Product Description(Do Not Steal My Idea)</b><br/>
+        <b>Product Description</b><br/>
 A hypothetical device to measure the weight of any box. Assuming, 
 a miniature digital scale that can stick on any pantry box. 
 The Kilograms app will give you the updated status of your pantry, 

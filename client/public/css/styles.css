@@ -14,14 +14,14 @@ h2{
   text-align: center;
 }
 a {
-  background:
+  /*background:
      linear-gradient(
        to bottom, rgba(163, 148, 152, 0.123) 0%,
        rgba(136, 73, 89, 0.425) 100%
      );
     background-position: 0 100%;
     background-repeat: repeat-x;
-    background-size: 0px 4px;
+    background-size: 0px 4px;*/
   color: #014d73;
   text-decoration: none;
   transition: background-size .5s;
@@ -48,8 +48,8 @@ a:hover {
 }
 
 .description_div{
-  font-family: 'Dancing Script', cursive;
-  font-size: 3rem;
+  font-family: 'Dancing Script';
+  font-size: 2.5rem;
   color: #014d73;
   text-align: center;
   margin: 0;
@@ -140,7 +140,9 @@ button:focus {outline:0;}
 }
 
 .pantry_image{
-  width: 18rem;
+  width: 16rem;
+  border-radius: 10px;
+  margin-left: 3rem;
 }
 .pantry_image_left_div{
   text-align: center;
@@ -151,9 +153,10 @@ button:focus {outline:0;}
   
 }
 .app_image{
-  width: 12rem;
-  border-radius: 11%
-  
+  width: 10rem;
+  border-radius: 11%;
+  transform: rotate(5deg);
+  margin-right: 3rem;
 }
 .idea-detail{
   font-family: 'Slabo 27px', serif;
@@ -164,26 +167,32 @@ button:focus {outline:0;}
   text-align: center;
 }
 .item_icon_image{
-  width: 6rem;
-  
+  width: 5.5rem;
+  border-radius: 5px;
 }
 .item_icon_div{
   padding-left: 0px;
+  padding-top : .2rem;
 }
 
 .add_to_list_div{
   padding:0;
   align-self: center;
-
+}
+.padding0{
+  padding:0;
+  text-align: -webkit-center;
 }
 .one_item_status  {
   font-family: 'Roboto', sans-serif;
-  color: #364f6b;
+  color: #014d73;
   background-color:#dbd7d7;
   border-style:solid;
-  border-color:#f0ebeb;
-  border-width:1px;
-  padding: 0;
+  border-color:#beb0b0;
+  border-width:2px;
+  padding: 2;
+  border-radius: 5px;
+  height:8rem;
 }
 .item_details{
   align-self: center;

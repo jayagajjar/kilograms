@@ -72,8 +72,8 @@ where the shopping list database is hosted in MongoDB. Front end is using React.
         <button title="Click to see the List" className="balance_scale_btn" onClick={showItemList}>
           <img className="pantry_image" src="images/pantry.jpg" alt="" /></button>
         </div>
-        <div className="col-sm-12 col-lg description_div"><a href="#">
-          An<br/> Automated Shopping List</a>
+        <div className="col-sm-12 col-lg description_div"><a href="#" onClick={showItemList}>
+          An<br/> Automated <br/>Shopping List</a>
         </div>
         <div className="col pantry_image_right_div">
           <button title="Click to see the List" className="balance_scale_btn" onClick={showItemList}>
@@ -88,6 +88,7 @@ where the shopping list database is hosted in MongoDB. Front end is using React.
             it has in the jar, and much more. Update your pantry with these digital scales and next time when you go to grocery shopping
             and see your favourite cereal on discount but not sure if you really
             need it or not, simply check your shopping list in the kilograms app!
+            <br/><br/>
           </div>
         </div>
       </div>

@@ -165,7 +165,7 @@ function App(){
     
       {items.map((anItem) => {
         return (
-          <div className="col-lg-6 " key={anItem.id}><Item onAdd={addItem}
+          <div className="col-lg-6 padding0" key={anItem.id}><Item onAdd={addItem}
       currWeight={anItem.currWeight}
       name={anItem.name}
       minWeightReq={anItem.minWeightReq}

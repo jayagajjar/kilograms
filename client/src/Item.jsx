@@ -1,12 +1,12 @@
 import React from "react";
 
-function Item(props) {
+function Item({onAdd, name, isItemAdded, image, currWeight, minWeightReq}) {
   
   function clickHandler(event) {
-    props.onAdd(props.name);
+    onAdd(name);
   }
   let src, tooltip;
-  if(props.isItemAdded){
+  if(isItemAdded){
    src= "images/list.png"
    tooltip= "Added"
 }
@@ -21,19 +21,19 @@ function Item(props) {
         <div className="col-4 item_icon_div">
         <img
 className="item_icon_image"
-src={"images/" + props.image + ".jpg"}
+src={"images/" + image + ".jpg"}
 alt=""
 />
         </div>
         <div className="col-5 item_details">
 <div className="row">
-<div className="col"><b>{props.name}</b></div>
+<div className="col"><b>{name}</b></div>
 </div>
 <div className="row">
-<div className="col">Current Weight {props.currWeight}</div>
+<div className="col">Current Weight {currWeight}</div>
 </div>
 <div className="row">
-<div className="col">Minimum Limit Weight {props.minWeightReq}</div>
+<div className="col">Minimum Limit Weight {minWeightReq}</div>
 </div>
 </div>
         <div className="col-3 add_to_list_div">

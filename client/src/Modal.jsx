@@ -1,24 +1,22 @@
 import React, {useEffect} from "react";
 
-function Modal(props) {
-    
+function Modal({isLoaded, onLoad, show, onClose, onChecked}) {
     useEffect(() => {
-        props.isLoaded[0] = true;
-        props.onLoad(props.isLoaded);
-        
+        isLoaded[0] = true;
+        onLoad(isLoaded);
       });
 
-    if(!props.show.toShow){
+    if(!show.toShow){
         return null;
     }
-    //console.log("mmmmmmmm"+props.show.shoppingItems);
+    
     function clikHandler(e){
         e.persist();
-        props.show.toShow = false;
-        props.onClose(e);
+        show.toShow = false;
+        onClose(e);
     }
-    return <div>{props.show.shoppingItems.map((a,index)=> {return <li onClick={(e) => {
-        props.onChecked(a.id);
+    return <div>{show.shoppingItems.map((a,index)=> {return <li onClick={(e) => {
+        onChecked(a.id);
         }} key={a.id}>{a.name}</li>})}<div>
     <button
             onClick={clikHandler}>

@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-
 function Modal({isLoaded, onLoad, show, onClose, onChecked}) {
     useEffect(() => {
         isLoaded[0] = true;

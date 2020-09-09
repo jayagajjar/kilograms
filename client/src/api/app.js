@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const api = axios.create({
-   // baseURL: 'https://kilogramsbackend.herokuapp.com/api',
-   baseURL:'http://localhost:3000/api/'
+    baseURL: 'https://kilogramsbackend.herokuapp.com/api',
+   //baseURL:'http://localhost:3000/api/'
 })
 
 export const insertItem = payload => api.post(`/shoppinglist`, payload)
